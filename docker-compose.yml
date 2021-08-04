@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  database:
+    image: 'mongo'
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: Test
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+  stocks-api:
+    build: 
+        context: .
+        dockerfile: Stocks/DockerFile
+    restart: always
+    ports:
+      - 5000:80
+    environment:
+      MongoDB__Host: mongo
+    depends_on:
+      - mongo

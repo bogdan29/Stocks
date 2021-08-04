@@ -1,0 +1,10 @@
+.vs/
+Stocks.Core/bin/
+Stocks.Core/obj/project.assets.json
+Stocks.Core/obj/
+Stocks.Domain/bin/
+Stocks.Domain/obj/
+Stocks.Infrastructure/bin/
+Stocks.Infrastructure/obj/
+Stocks/bin/
+Stocks/obj/
